@@ -1,0 +1,22 @@
+// Initialisation apportée aux textes plus généralement
+@use '../Abstract/index' as *;
+
+h1,
+.h1,
+.title, 
+.Section__Title {
+    font-size: clamp(36px, 2vw, 48px);
+    color: var(--clr-primary-100);
+    font-family: 'Roboto condensed', sans-serif;
+    font-weight: 600;
+}
+
+h2,
+.h2 {
+    font-size: clamp(24px, 2vw, 36px);
+    font-family: Neometric, sans-serif;
+}
+
+.suptitle {
+    font-size: clamp(65px, 2vw, 96px);
+}

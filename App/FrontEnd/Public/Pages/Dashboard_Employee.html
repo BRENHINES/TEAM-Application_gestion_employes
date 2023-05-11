@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Importation du fichier CSS-->
+    <link rel="stylesheet" href="/FRONT/Public/SASS/style.css">
+    <!--Importation de Boxicons-->
+    <link rel="stylesheet" href="/FRONT/Public/Assets/boxicons-2.1.4/css/boxicons.min.css">
+
+    <title>Dashboard_Employé</title>
+</head>
+
+<body>
+
+    <section class="Dashboard__Wrapper">
+        <div class="Dashboard__Container">
+
+            <!--Debut Aside-->
+            <aside class="Sidebar">
+                <div class="Sidebar__Navbar">
+                    <!--Logo de la Page-->
+                    <div class="Sidebar__Logo">
+                            <img src="/FRONT/Public/Assets/Images/logo.svg" alt="logo">
+                            <h2>TE<span>AM</span></h2>
+                    </div>
+                </div>
+        
+                <div class="Sidebar__Main">
+                    <a href="#" class="tabs active">
+                        <i class="bx bxs-dashboard"></i>
+                        <h3>Dashboard</h3>
+                    </a>
+                    <h5>ORGANISATION</h5>
+                    <a href="#" class="tabs">
+                        <i class="bx bxs-bar-chart-alt-2"></i>
+                        <h3>Performance</h3>
+                    </a>
+                    <a href="#" class="tabs">
+                        <i class="bx bxs-calendar-star"></i>
+                        <h3>Projet</h3>
+                    </a>
+                    <a href="#" class="tabs">
+                        <i class="bx bx-support"></i>
+                        <h3>Support</h3>
+                    </a>
+                    <a href="#" class="tabs">
+                        <i class="bx bx-log-out-circle"></i>
+                        <h3>Déconnexion</h3>
+                    </a>
+                </div>
+            </aside>
+            <!--Fin Aside-->
+
+            <!--Debut Navbar-->
+            <header class="Navbar">
+                <div class="Navbar__Wrapper">
+                    <div class="Navbar__Title">
+                        <h1>Dashboard  |  <span>John Doe</span></h1>
+                    </div>
+    
+                    <div class="Navbar__Profile">
+                        <div>
+                            <div class="Navbar__Profile--Info">
+                                <p>Hey, <b>John</b></p>
+                                <small class="text-muted">SEO</small>
+                            </div>
+                            <div class="Navbar__Profile--Img">
+                                <a href="#">
+                                    <img src="/FRONT/Public/Assets/Images/equipe_travail.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--Fin Header-->
+
+            <main class="Main--Full">
+                <div class="Main--Up">
+                    <h2>
+                        Mes Statistiques
+                    </h2>
+                    <!--Debut des statistiques-->
+                    <div class="Main__Stastistics">
+                        <div class="Main__Stastistics--Card">
+                            <div class="Card--Left">
+                                <i class="bx bx-current-location"></i>
+                            </div>
+                            <div class="Card--Right">
+                                <div class="content">
+                                    <h3>Projet en cours</h3>
+                                    <h4>5</h4>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="Main__Stastistics--Card">
+                            <div class="Card--Left">
+                                <i class="bx bx-task-x"></i>
+                            </div>
+                            <div class="Card--Right">
+                                <div class="content">
+                                    <h3>Projet remis</h3>
+                                    <h4>10</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Main__Stastistics--Card">
+                            <div class="Card--Left">
+                                <i class="bx bx-task"></i>
+                            </div>
+                            <div class="Card--Right">
+                                <div class="content">
+                                    <h3>Projet terminés</h3>
+                                    <h4>20</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Main--Down">
+
+                    <div class="Main__Projects">
+                        <h2>Projets Récents</h2>
+                        <div>
+                            <div class="Project">
+                                <div class="Project__Description">
+                                    <p>John Doe</p>
+                                    <p>Site Web pour l'entreprise.</p>
+                                </div>
+                            </div>
+                            <div class="Project">
+                                <div class="Project__Description">
+                                    <p>Jane Doe</p>  
+                                    <p>Application desktop et mobile pour MTN.</p>
+                                </div>
+                            </div>
+                            <div class="Project">
+                                <div class="Project__Description">
+                                    <p>Lebron James</p>
+                                    <p>Créer l'application OM pour Orange Cameroun.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="Main__Meeting">
+                        <h2>Réunions</h2>
+                        <div class="item">
+                            <div class="right">
+                                <div class="info">
+                                    <h3>Réunion 1</h3>
+                                </div>
+                                <h3>24 Mai</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="right">
+                                <div class="info">
+                                    <h3>Réunion 2</h3>
+                                </div>
+                                <h3>30 Juin</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="right">
+                                <div class="info">
+                                    <h3>Mise au point</h3>
+                                </div>
+                                <h3>30 Juillet</h3>
+                            </div>
+                        </div>
+                        <div class="item add-product">
+                            <div>
+                                <i class="fa-solid fa-xmark light active"></i>
+                                <a href="#">Voir plus</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </main>
+            
+        </div>
+    </section>
+
+    <!--Import de la librairie GSAP-->
+    <script src="/FRONT/Source/Libs/gsap.min.js"></script>
+    
+    <script src="/FRONT/Source/JS/Dashboard.js"></script>
+</body>
+</html>

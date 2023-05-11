@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Importation du fichier CSS compilé-->
+    <link rel="stylesheet" href="/FRONT/Public/SASS/style.css">
+    <!--Importation des icônes de Boxicons-->
+    <link rel="stylesheet" href="/FRONT/Public/Assets/boxicons-2.1.4/css/boxicons.min.css">
+
+    <!--Titre de la page-->
+    <title>Connexion</title>
+
+</head>
+
+
+<body>
+    <!-- Debut Page de Chargement-->
+    <section class="Loading__Page">
+        <div class="Loading__Logo">
+            <img src="/FRONT/Public/Assets/Images/logo.svg" alt="svg" class="Logo">
+        </div>
+
+        <div class="Loading__Name">
+            <div class="Name">
+                TEAM
+            </div>
+        </div>
+    </section>
+    <!--Fin Page de Chargement-->
+
+    <!--Début Page de Connexion-->
+    <section class="Login__Page">
+        <div class="Login__Container" id="Container">
+            
+            <!--Formulaire de connexion à l'aide de son Email-->
+            <div class="Form__Container Form__Container--Email">
+                <form action="#">
+                    <h1>Se connecter</h1>
+                    <div class="Form__Field">
+                        <input type="email" placeholder="Email" />
+                        <label></label>
+                    </div>
+                    <div class="Form__Field">
+                        <input type="password" placeholder="Password" id="PasswordField1"/>
+                        <span class="Password__eyes" onclick="HidePassword1()">
+                            <i class="bx bx-low-vision bx-xs" id="PasswordHide1"></i>
+                            <i class="bx bx-tv bx-xs bx-tada-hover" id="PasswordVisible1"></i>
+                        </span>
+                        <label></label>
+                    </div>
+                    <button class="Btn__Login">
+                        <i class="bx bxs-paper-plane bx-sm bx-tada-hover"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!--Formulaire de connexion à l'aide de son ID-->
+            <div class="Form__Container Form__Container--ID">
+                <form action="#">
+                    <h1>Se connecter</h1>                    
+                    <div class="Form__Field">
+                        <input type="text" placeholder="Name" />
+                        <label></label>
+                    </div>
+                    <div class="Form__Field">
+                        <input type="text" placeholder="ID" />
+                        <label></label>
+                    </div>
+                    <div class="Form__Field">
+                        <input type="password" placeholder="Password" id="PasswordField2"/>
+                        <span class="Password__eyes" onclick="HidePassword2()">
+                            <i class="bx bx-low-vision bx-xs" id="PasswordHide2"></i>
+                            <i class="bx bx-tv bx-xs bx-tada-hover" id="PasswordVisible2"></i>
+                        </span>
+                        <label></label>
+                    </div>
+                    <button class="Btn__Login">
+                        <i class="bx bxs-paper-plane bx-sm bx-tada-hover"></i>
+                        
+                    </button>
+                </form>
+            </div>
+
+            <!--Swipe overlay section-->
+            <div class="Overlay__Container" id="OverlayCon">
+                <div class="Overlay">
+                    <!--Overlay Gauche-->
+                    <div class="Overlay__Panel overlay--left">
+                        <h1>
+                            <img src="/FRONT/Public/Assets/Images/logo_login.png" alt="">
+                            Salut !
+                        </h1>
+                        <p>Connectez vous avec votre Email.</p>
+                        <button>Essayer</button>
+                    </div>
+
+                    <!--Overlay Droit-->
+                    <div class="Overlay__Panel overlay--right">
+                        <h1>
+                            <img src="/FRONT/Public/Assets/Images/logo_login.png" alt="">
+                            Salut !
+                        </h1>
+                        <p>Connectez vous avec votre <br> ID professionnel.</p>
+                        <button>Essayer</button>
+                    </div>
+                </div>
+                <button id="OverlayBtn"></button>
+            </div>
+        </div>
+    </section>
+    <!--Fin Page de Connexion-->
+    
+
+    <!--Importation de la librairie GSAP-->
+    <script src="/FRONT/Source/Libs/gsap.min.js"></script>
+    <!--Importation du fichier JS concernant la Page de connexion-->
+    <script src="/FRONT/Source/JS/Login.js"></script>
+
+</body>
+</html>

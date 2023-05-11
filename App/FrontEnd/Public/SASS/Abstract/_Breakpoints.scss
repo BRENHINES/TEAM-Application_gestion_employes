@@ -1,0 +1,15 @@
+// Initialisation des différents breakpoints sous le format de map
+$breakpoints: (
+    small: 375px,
+    medium: 744px,
+    big: 1024px
+);
+
+// Mixin pour les Media Queries
+@mixin mq($key) {
+    $size: map-get($map: $breakpoints, $key: $key);
+
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}

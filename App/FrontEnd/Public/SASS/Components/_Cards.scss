@@ -1,0 +1,198 @@
+// Cards du Dashboard
+.Main__Stastistics--Card {
+    background: var(--clr-neutral_light-100);
+    background-size: contain;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+
+    overflow: hidden;
+
+    &:hover {
+        box-shadow: none;
+        cursor: pointer;
+    }
+
+    .Card--Left {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        
+        
+        i {
+            position: absolute;
+            color: var(--clr-secondary-100);
+            font-size: 10rem;
+            bottom: -140px;
+            left: 50px;
+            opacity: 0.28;
+        }
+    }
+
+    .Card--Right {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 20;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            h3 {
+                font-family: 'Roboto condensed', sans-serif;
+                font-size: calc(var(--fs-400) + 3px);
+                margin: 0rem 0 0.2rem 0rem;
+            }
+
+            h4 {
+                font-size: var(--fs-500);
+            }
+        }
+
+    }
+}
+
+// Cards des Projets
+// Cards des départements
+.Section__Card--Departemnt,
+.Section__Card--Employee {
+    border-radius: var(--border-radius-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    background: var(--clr-neutral_light-100);
+    padding: 1rem 0rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+
+    &:hover {
+        transition: all 300ms ease;
+        box-shadow: none;
+    }
+
+    .Profile__Picture {
+        img {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            border: 5px solid var(--clr-primary-100);
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--fs-400);
+            font-weight: 600;
+            color: var(--clr-primary-100);
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            border: 3px solid var(--clr-primary-100);
+        }
+    }
+
+    .Profile__Name {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: center;
+
+        h2 {
+            font-size: var(--fs-500);
+            font-family: 'Bebas Neue', sans-serif;
+            color: var(--clr-secondary-100);
+        }
+
+        h3 {
+            font-size: var(--fs-350);
+            color: var(--clr-neutral_light-600);
+        }
+    }
+
+    .Profile__Stats {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2.5rem;
+        margin-top: 1rem;
+
+        .Stat {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: .6rem;
+
+            h5 {
+                font-size: calc(var(--fs-300) + 3px);
+            }
+
+            p {
+                font-size: var(--fs-400);
+            }
+        }
+    }
+
+    .progress_bar {
+        width: 86%;
+        margin: 0 auto;
+        border-radius: 10px;
+        height: 10px;
+        background: black;
+    }
+
+    .autor {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5rem;
+
+        img {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+        }
+
+        .icons {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+}
+
+// Cards des employés
+.Section__Card--Employee {
+    .Profile__ModificationIcons {
+        display: flex;
+        gap: 1.3rem;
+        align-items: center;
+        justify-content: center;
+
+        .modal-div {
+            a {
+                background-color: transparent;
+                color: var(--clr-primary-100);
+                width: 10px;
+                height: 10px;
+                transition: all 60ms ease;
+
+                &:hover {
+                    color: var(--clr-secondary-100);
+                    transition: all 60ms ease;
+                }
+            }
+        }
+    }
+}
+
+// Cards des notifications

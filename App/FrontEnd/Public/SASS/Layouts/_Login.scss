@@ -1,0 +1,153 @@
+.Login__Page {
+    height: 100vh;
+    background-color: var(--clr-neutral_light-600);
+    display: grid;
+    place-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+
+    .Login__Container {
+        position: relative;
+        width: 900px;
+        height: 500px;
+        background-color: var(--clr-neutral_light-100);
+        box-shadow: 25px 30px 55px var(--clr-neutral_dark-500);
+        border-radius: 13px;
+        overflow: hidden;
+
+        .Form__Container {
+            position: absolute;
+            width: 60%;
+            height: 100%;
+            padding: 0px 40px;
+            transition: all 0.6s ease-in-out;
+
+            &--ID {
+                opacity: 0;
+                z-index: 1;
+            }
+
+            &--Email {
+                z-index: 2;
+            }
+        }
+
+        &.panel--active {
+            .Overlay__Container {
+                transform: translateX(-150%);
+            }
+
+            .Overlay {
+                transform: translateX(50%);
+            }
+
+            .overlay--left {
+                transform: translateX(25%);
+                z-index: 50;
+            }
+
+            .overlay--right {
+                transform: translateX(-35%);
+                z-index: 50;
+            }
+
+            .Form__Container--Email {
+                transform: translateX(60%);
+                opacity: 0;
+            }
+
+            .Form__Container--ID {
+                transform: translateX(66.7%);
+                opacity: 1;
+                z-index: 10;
+                animation: show 0.6s;
+            }
+        }
+
+        .Overlay__Container {
+            position: absolute;
+            top: 0;
+            left: 60%;
+            width: 40%;
+            height: 100%;
+            overflow: hidden;
+            transition: transform 0.6s ease-in-out;
+            z-index: 100;
+
+            .Overlay {
+                position: relative;
+                background: var(--clr-linear-grad-100);
+                color: #fff;
+                left: -150%;
+                height: 100%;
+                width: 250%;
+                transition: transform 0.6s ease-in-out;
+
+                .Overlay__Panel {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 0px 40px;
+                    text-align: center;
+                    height: 100%;
+                    width: 340px;
+                    z-index: 10;
+                    transition: 0.6s ease-in-out;
+
+                    h1 {
+                        display: flex;
+                        justify-content: center;
+                        gap: 25px;
+                        color: var(--clr-secondary-100);
+
+                        img {
+                            width: 45px;
+                            height: 45px;
+                        }
+                    }
+
+                    p {
+                        font-family: 'Roboto condensed', sans-serif;
+                        font-size: var(--fs-400);
+                        font-weight: 300;
+                        line-height: 24px;
+                        letter-spacing: 0.5px;
+                        margin: 25px 0px 35px;
+                    }
+
+                    button {
+                        color: #fff;
+                        border: none;
+                        background-color: transparent;
+                        font-family: 'Bebas Neue', sans-serif;
+                        font-size: 24px;
+                    }
+
+                    &.overlay--left {
+                        right: 46%;
+                        transform: translateX(-12%);
+                    }
+
+                    &.overlay--right {
+                        right: 0;
+                        transform: translateX(0%);
+                    }
+                }
+            }
+            #OverlayBtn {
+                cursor: pointer;
+                position: absolute;
+                left: 52%;
+                top: 304px;
+                transform: translateX(-50%);
+                width: 140px;
+                height: 40px;
+                border: 1px solid #fff;
+                background: transparent;
+                border-radius: 20px;
+                z-index: 100;
+            }
+        }
+    }
+}
