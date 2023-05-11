@@ -1,0 +1,23 @@
+{
+  "name": "team_app",
+  "version": "1.0.0",
+  "description": "Application de gestion des employés d'une entreprise.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BRENHINES/TEAM-Application_gestion_employes.git"
+  },
+  "author": "BRENHINES",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BRENHINES/TEAM-Application_gestion_employes/issues"
+  },
+  "homepage": "https://github.com/BRENHINES/TEAM-Application_gestion_employes#readme",
+  "devDependencies": {
+    "electron": "^24.3.0"
+  }
+}
