@@ -16,8 +16,9 @@ const createWindow = () => {
     })
 
     // Chargement du fichier d'entré de l'application (la première page qui doit s'afficher au démarrage de l'application)
-    window.loadFile('./FRONTEND/index.html')
+    window.loadFile('./App/FrontEnd/index.html')
 }
+
 
 // build: Initialisation de la promesse d'attente de l'affichage de la fenêtre
 app.whenReady().then(() => {
