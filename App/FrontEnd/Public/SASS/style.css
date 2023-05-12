@@ -1386,6 +1386,12 @@ form .Form__Field label {
   font-family: "Roboto condensed", sans-serif;
 }
 
+.Navigation-Bar {
+  width: 100vw;
+  height: 40px;
+  background-color: var(--clr-primary-100);
+}
+
 .modal {
   position: fixed;
   display: flex;

@@ -8,15 +8,16 @@ const path = require('path')
 const createWindow = () => {
     // Création et initialisation dela fenêtre de l'application
     const window = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 1366,
+        height: 768,
+        icon: "Logo.ico",
         webPreferences: {
             preload: path.join(__dirname, './preloader.js')
         }
     })
 
     // Chargement du fichier d'entré de l'application (la première page qui doit s'afficher au démarrage de l'application)
-    window.loadFile('./App/FrontEnd/index.html')
+    window.loadFile('./App/FrontEnd/Public/Pages/Login.html')
 }
 
 
