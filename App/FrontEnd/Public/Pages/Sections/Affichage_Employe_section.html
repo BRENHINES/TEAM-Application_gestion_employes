@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Importation du fichier CSS-->
+    <link rel="stylesheet" href="/FRONT/Public/SASS/style.css">
+    <!--Importation des icônes de Boxicons-->
+    <link rel="stylesheet" href="/FRONT/Public/Assets/boxicons-2.1.4/css/boxicons.min.css">
+
+    <title>Employé</title>
+</head>
+<body>
+    
+    <section class="Section">
+        <div class="Section__content">
+            <div>
+                <a href="#Modal" class="js-modal">
+                    <i class="bx bx-plus"></i>
+                    Add
+                </a>
+                <aside class="Modal" id="Modal" aria-hidden="true" role="dialog" aria-labelledby="false" style="display:none;">
+                    <div class="Modal__Wrapper js-modal-stop emp">
+                        <h2>
+                            Créer un nouvel employé
+                        </h2>
+                        <div class="Modal__Content">
+                            <form action="#">
+                                <div class="Form__Field">
+                                    <input type="text" placeholder="Nom" />
+                                    <label></label>
+                                </div>
+                                <div class="Form__Field">
+                                    <input type="date" placeholder="Date de naissance"/>
+                                    <label></label>
+                                </div>
+                                <div class="Form__Field">
+                                    <input type="text" placeholder="Sexe"/>
+                                    <label></label>
+                                </div>
+                                <div class="Form__Field">
+                                    <input type="email" placeholder="Email"/>
+                                    <label></label>
+                                </div>
+                                <div class="Form__Field">
+                                    <input type="text" placeholder="Adresse"/>
+                                    <label></label>
+                                </div>
+                                <div class="Form__Field">
+                                    <input type="text" placeholder="Service"/>
+                                    <label></label>
+                                </div>
+                            </form>
+
+                            <form action="#">
+                                <div class="Form__Field">
+                                    <input type="text" placeholder="Prenom"/>
+                                    <label></label>
+                                </div>
+                                <div class="Form__Field">
+                                    <input type="text" placeholder="Lieu de naissance"/>
+                                    <label></label>
+                                </div>
+                                <div class="Form__Field">
+                                    <input type="text" placeholder="Situation Matrimoniale"/>
+                                    <label></label>
+                                </div>
+                                <div class="Form__Field">
+                                    <input type="tel" placeholder="Contact"/>
+                                    <label></label>
+                                </div>
+                                <div class="Form__Field">
+                                    <input type="text" placeholder="Poste"/>
+                                    <label></label>
+                                </div>
+                                <div class="Form__Field">
+                                    <input type="number" placeholder="Salaire de base"/>
+                                    <label></label>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="Btn__Container">
+                            <a href="#" class="js-close-modal">Annuler</a>
+                            <a href="#">Valider</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <div class="Section__Title">
+            <h3>Les employés</h3>
+        </div>
+
+        <div class="Section__CardList">
+            <div class="Section__Card--Employee">
+                <div class="Profile__Picture">
+                    <img src="/FRONT/Public/Assets/Images/1.jpg" alt="">
+                </div>
+
+                <div class="Profile__Name">
+                    <h2>John Doe</h2>
+                    <h3>SEO</h3>
+                </div>
+
+                <div class="Profile__ModificationIcons">
+                    <div class="modal-div">
+                        <a href="#modalmod" class="js-modal bx bxs-folder bx-sm"></a>
+                        <aside class="modal" id="modalmod" aria-hidden="true" role="dialog" aria-labelledby="false" style="display:none;">
+                            <div class="modal-wrapper js-modal-stop">
+                                <h2>
+                                    Modifier cet Employé
+                                </h2>
+                                <a href="#" class="js-close-modal">Close</a>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div class="modal-div">
+                        <a href="#modalsup" class="js-modal bx bxs-folder bx-sm"></a>
+                        <aside class="modal" id="modalsup" aria-hidden="true" role="dialog" aria-labelledby="false" style="display:none;">
+                            <div class="modal-wrapper js-modal-stop">
+                                <h2>
+                                    Supprimer cet Employé
+                                </h2>
+                                <a href="#" class="js-close-modal">Close</a>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Import de la librairie GSAP-->
+    <script src="/FRONT/Source/Libs/gsap.min.js"></script>
+    <script src="/FRONT/Source/JS/app.js"></script>
+</body>
+</html>

@@ -9,6 +9,10 @@
         grid-template-columns: 14rem auto;
         grid-template-rows: 100px auto;
 
+        &::-webkit-scrollbar-track {
+            background: black;
+        }
+
         .Sidebar {
             height: 100vh;
             background: var(--clr-neutral_light-600);

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Importation du fichier CSS-->
+    <link rel="stylesheet" href="/FRONT/Public/SASS/style.css">
+    <!--Importation des icônes de Boxicons-->
+    <link rel="stylesheet" href="/FRONT/Public/Assets/boxicons-2.1.4/css/boxicons.min.css">
+
+    <title>Département</title>
+</head>
+<body>
+    
+    <section class="Section">
+        <div class="Section__content">
+            <div>
+                <a href="#Modal" class="js-modal">
+                    <i class="bx bx-plus"></i>
+                    Add
+                </a>
+                <aside class="Modal" id="Modal" aria-hidden="true" role="dialog" aria-labelledby="false" style="display:none">
+                    <div class="Modal__Wrapper js-modal-stop dep">
+                        <h2>
+                            Créer un nouveau Département
+                        </h2>
+
+                        <div class="Modal__Content">
+                            <form action="#">
+                                <div class="Form__Field">
+                                    <input type="text" placeholder="Nom Du Département" />
+                                    <label></label>
+                                </div>
+                                <div class="Form__Field">
+                                    <input type="text" placeholder="Nom du premier Service"/>
+                                    <label></label>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="Btn__Container">
+                            <a href="#" class="js-close-modal Reset">Annuler</a>
+                            <a href="#" class="Accept">Valider</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+        <div class="Section__Title">
+            <h3>Les départements</h3>
+        </div>
+        <div class="Section__CardList">
+            <div class="Section__Card--Departemnt">
+                <div class="Profile__Picture">
+                    <p>DS</p>
+                </div>
+                <div class="Profile__Name">
+                    <h2>DSI</h2>
+                </div>
+                <div class="Profile__Stats">
+                    <div class="Stat">
+                        <h5>Employé</h5>
+                        <p>20</p>
+                    </div>
+                    <div class="Stat">
+                        <h5>Service</h5>
+                        <p>10</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!--Import de la librairie GSAP-->
+    <script src="/FRONT/Source/Libs/gsap.min.js"></script>
+    <script src="/FRONT/Source/JS/app.js"></script>
+</body>
+</html>

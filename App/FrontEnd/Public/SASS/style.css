@@ -42,11 +42,11 @@
 }
 @font-face {
   font-family: "Bebas Neue";
-  src: url("/FRONT/Public/Assets/Fonts/Bebas Neue/BebasNeue-Regular.ttf");
+  src: url("./BebasNeue-Regular.ttf");
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/FRONT/Public/Assets/Fonts/Roboto Condensed/RobotoCondensed-Regular.ttf");
+  src: url("./RobotoCondensed-Regular.ttf");
 }
 html {
   box-sizing: border-box;
@@ -960,6 +960,9 @@ form .Form__Field label {
   grid-template-columns: 14rem auto;
   grid-template-rows: 100px auto;
 }
+.Dashboard__Wrapper .Dashboard__Container::-webkit-scrollbar-track {
+  background: black;
+}
 .Dashboard__Wrapper .Dashboard__Container .Sidebar {
   height: 100vh;
   background: var(--clr-neutral_light-600);
@@ -1384,12 +1387,6 @@ form .Form__Field label {
   font-size: var(--fs-400);
   color: var(--clr-primary-100);
   font-family: "Roboto condensed", sans-serif;
-}
-
-.Navigation-Bar {
-  width: 100vw;
-  height: 40px;
-  background-color: var(--clr-primary-100);
 }
 
 .modal {
