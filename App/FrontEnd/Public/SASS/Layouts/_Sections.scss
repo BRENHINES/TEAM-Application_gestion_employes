@@ -6,7 +6,7 @@
     .cover {
         position: relative;
         height: 30vh;
-        background: url("/FRONT/Public/Assets/Images/1.jpg") no-repeat;
+        background: var(--clr-primary-100) no-repeat;
         background-size: cover;
     }
 

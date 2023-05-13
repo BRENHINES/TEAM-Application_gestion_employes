@@ -457,7 +457,7 @@ form .Form__Field label {
 .profile-section .cover {
   position: relative;
   height: 30vh;
-  background: url("/FRONT/Public/Assets/Images/1.jpg") no-repeat;
+  background: var(--clr-primary-100) no-repeat;
   background-size: cover;
 }
 .profile-section .profile-container {
@@ -1162,6 +1162,7 @@ form .Form__Field label {
   text-align: center;
   transition: all 300ms ease;
   box-shadow: var(--box-shadow);
+  font-family: "Roboto", sans-serif;
 }
 .Dashboard__Wrapper .Dashboard__Container .Main .Main--Left .Main__ListEmploye table:hover {
   box-shadow: none;
