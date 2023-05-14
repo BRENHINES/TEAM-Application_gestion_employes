@@ -1,4 +1,8 @@
 let modal = null
+let text = gsap.timeline();
+let Card_Departemnt = document.querySelectorAll(".Section__Card--Departemnt")
+let Card_Employe = document.querySelectorAll(".Section__Card--Employee")
+let Card_Service = document.querySelectorAll(".Service__List--item")
 
 let openModal = function (e) {
     e.preventDefault()
@@ -39,3 +43,43 @@ window.addEventListener('keydown', function (e) {
         closeModal(e)
     }
 })
+
+text.from(".Section__Title", 1.8, {
+    y: -20,
+    ease: "power4.out",
+    delay: 1,
+    opacity: 0,
+    stagger: {
+        amount: 0.3
+    }
+})
+
+gsap.from(Card_Departemnt, {
+    duration: 4,
+    scale: 0.1,
+    opacity: 0,
+    delay: 0.6,
+    stagger: 0.2,
+    ease: "elastic",
+    force3D: true
+});
+
+gsap.from(Card_Employe, {
+    duration: 4,
+    scale: 0.1,
+    opacity: 0,
+    delay: 0.6,
+    stagger: 0.2,
+    ease: "elastic",
+    force3D: true
+});
+
+gsap.from(Card_Service, {
+    duration: 4,
+    scale: 0.1,
+    opacity: 0,
+    delay: 0.6,
+    stagger: 0.2,
+    ease: "elastic",
+    force3D: true
+});

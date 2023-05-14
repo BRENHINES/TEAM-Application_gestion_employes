@@ -3,7 +3,7 @@ let Container = document.getElementById('Container');
 let OverlayCon = document.getElementById('OverlayCon');
 let OverlayBtn = document.getElementById('OverlayBtn');
 
-// Animations de la Page de Chargement
+// FEAT: Animations de la Page de Chargement
 gsap.fromTo('.Loading__Page', {opacity:1}, {
     opacity:0,
     display: "none",
@@ -34,12 +34,12 @@ gsap.fromTo('.Name', {
 });
 
 
-// Animations de la page de Connexion
+// FEAT: Animations de la page de Connexion
 OverlayBtn.addEventListener('click', () => {
     Container.classList.toggle('panel--active');
 });
 
-// Animations pour les Formulaires de Connexion
+// FEAT: Animations pour les Formulaires de Connexion
 function HidePassword1() {
     var Field = document.getElementById("PasswordField1");
     var HideIcon = document.getElementById("PasswordHide1");

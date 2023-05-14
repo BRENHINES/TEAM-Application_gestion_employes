@@ -4,29 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!--Importation du fichier CSS-->
     <link rel="stylesheet" href="../SASS/style.css">
     <!--Importation de Boxicons-->
     <link rel="stylesheet" href="../Assets/Boxicons-2.1.4/css/boxicons.min.css">
-    
     <title>Dashboard_Admin</title>
 </head>
 <body>
-
     <section class="Dashboard__Wrapper">
         <div class="Dashboard__Container">
-
-            <!--Debut Aside-->
             <aside class="Sidebar">
                 <div class="Sidebar__Navbar">
-                    <!--Logo de la Page-->
                     <div class="Sidebar__Logo">
                             <img src="../Assets/Images/logo.svg" alt="logo">
                             <h2>TE<span>AM</span></h2>
                     </div>
                 </div>
-        
                 <div class="Sidebar__Main">
                     <a href="#" class="tabs active">
                         <i class="bx bxs-dashboard"></i>
@@ -64,9 +57,6 @@
                     </a>
                 </div>
             </aside>
-            <!--Fin Aside-->
-
-            <!--Debut Navbar-->
             <header class="Navbar">
                 <div class="Navbar__Wrapper">
                     <div class="Navbar__Title">
@@ -88,15 +78,11 @@
                     </div>
                 </div>
             </header>
-            <!--Fin Header-->
-
-            <!--Debut Partie Centrale de la page-->
             <main class="Main">
                 <div class="Main--Left">
-                    <h2>
+                    <h2 class="Part__Title">
                         Statistiques de l'Enterprise
                     </h2>
-                    <!--Debut des statistiques-->
                     <div class="Main__Stastistics">
                         <div class="Main__Stastistics--Card">
                             <div class="Card--Left">
@@ -109,7 +95,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="Main__Stastistics--Card">
                             <div class="Card--Left">
                                 <i class="bx bxs-folder"></i>
@@ -121,7 +106,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="Main__Stastistics--Card">
                             <div class="Card--Left">
                                 <i class="bx bxs-folder-open"></i>
@@ -133,7 +117,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="Main__Stastistics--Card">
                             <div class="Card--Left">
                                 <i class="bx bx-trip"></i>
@@ -146,9 +129,8 @@
                             </div>
                         </div>
                     </div>
-    
                     <div class="Main__ListEmploye">
-                        <h2>
+                        <h2 class="Part__Title">
                             Liste des Employés
                         </h2>
                         <table>
@@ -190,11 +172,9 @@
                         <a href="#">Voir Plus</a>
                     </div>
                 </div>
-
                 <div class="Main--Right">
-
                     <div class="Main__Projects">
-                        <h2>Projets Récents</h2>
+                        <h2 class="Part__Title">Projets Récents</h2>
                         <div>
                             <div class="Project">
                                 <div class="Project__Description">
@@ -216,9 +196,8 @@
                             </div>
                         </div>
                     </div>
-    
                     <div class="Main__Meeting">
-                        <h2>Réunions</h2>
+                        <h2 class="Part__Title">Réunions</h2>
                         <div class="item">
                             <div class="right">
                                 <div class="info">
@@ -250,17 +229,14 @@
                             </div>
                         </div>
                     </div>
-    
                 </div>
             </main>
-            <!--Fin Partie Centrale de la page-->
-            
         </div>
     </section>
 
     <!--Import de la librairie GSAP-->
     <script src="../Source/Libs/gsap.min.js"></script>
-    
+    <!--Importation du fichier Js-->
     <script src="../Source/JS/Dashboard.js"></script>
 </body>
 </html>

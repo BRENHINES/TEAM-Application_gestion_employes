@@ -4,30 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <!--Importation du fichier CSS-->
     <link rel="stylesheet" href="../SASS/style.css">
     <!--Importation de Boxicons-->
     <link rel="stylesheet" href="../Assets/Boxicons-2.1.4/css/boxicons.min.css">
-
     <title>Profile</title>
 </head>
 <body>
-    <section class="profile-section">
-        <div class="cover">
-
-        </div>
-        <div class="profile-container">
-            <div class="main-profile">
-                <div class="left-profile">
-                    <div class="photo-profile">
-                        <img src="../Assets/Images/logo_principal.png" alt="">
+    <section class="Profile__Section">
+        <div class="Profile__Cover"></div>
+        <div class="Profile__Container">
+            <div class="Profile__Content--Main">
+                <div class="Profile__Content--left">
+                    <div class="Profile__Photo">
+                        <img src="../Assets/Images/logo_principal.png" alt="Photo de Profile de l'employé">
                     </div>
-                    <div class="name-profile">
+                    <div class="Profile__Name">
                         <h1>John Doe</h1>
                         <h2>Admin</h2>
                     </div>
-                    <div class="profile-tabs">
+                    <div class="Profile__Tabs">
                         <a href="#" class="tabs active">
                             <i class="bx bx-trip"></i>
                             <h3>Project</h3>
@@ -42,7 +38,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="right-profile">
+                <div class="Profile__Content--right">
                     <p>
                         Nom
                         <span>
@@ -122,6 +118,7 @@
 
     <!--Import de la librairie GSAP-->
     <script src="../Source/Libs/gsap.min.js"></script>
+    <!--Importation du fichier Js-->
     <script src="../Source/JS/profile.js"></script>
 </body>
 </html>

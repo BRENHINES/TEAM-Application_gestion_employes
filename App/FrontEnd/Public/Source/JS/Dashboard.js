@@ -1,6 +1,11 @@
 let modal = null
+let stats_card = document.querySelectorAll(".Main__Stastistics--Card")
+let Emp_List = document.querySelectorAll("tr")
+let Project_List = document.querySelectorAll(".Project")
+let Meet_List = document.querySelectorAll(".item")
+let text = gsap.timeline();
 
-// Fonction pour la gestion des Modal
+// FEAT: Fonction pour la gestion des Modal
 let openModal = function (e) {
     e.preventDefault();
     const target = document.querySelector(e.target.getAttribute('href'));
@@ -35,7 +40,7 @@ document.querySelectorAll('.js-modal').forEach(a => {
     a.addEventListener('click', openModal)
 })
 
-// Fonction pour la gestion des onglets clickables
+// FEAT: Fonction pour la gestion des onglets clickables
 function _class(name) {
     return document.getElementsByClassName(name);
 }
@@ -48,4 +53,34 @@ for(let i=0; i<tabs.length; i++){
         tabs[i].classList.add("active");
     })
 }
+
+// FEAT: Animations sur les cards du dashboard
+gsap.from([stats_card, ".Main__Projects > div", "table"], {
+    duration: 4,
+    scale: 0.1,
+    opacity: 0,
+    delay: 0.6,
+    stagger: 0.2,
+    ease: "elastic",
+    force3D: true
+});
+
+gsap.from([Emp_List, Project_List, Meet_List], {
+    duration: 3,
+    scale: 0.8,
+    opacity: 0,
+    delay: 0.3,
+    stagger: 0.1,
+    ease: "elastic"
+});
+
+text.from(".Part__Title", 1.8, {
+    y: -20,
+    ease: "power4.out",
+    delay: 1,
+    opacity: 0,
+    stagger: {
+        amount: 0.3
+    }
+})
 

@@ -1,27 +1,28 @@
 /***************** SECTION PROFILE ****************/
-.profile-section {
+.Profile__Section {
     height: 100vh;
     background: var(--clr-neutral_light-300);
+    overflow: hidden;
 
-    .cover {
+    .Profile__Cover {
         position: relative;
         height: 30vh;
         background: var(--clr-primary-100) no-repeat;
         background-size: cover;
     }
 
-    .profile-container {
+    .Profile__Container {
         display: flex;
         justify-content: center;
         
-        .main-profile {
+        .Profile__Content--Main {
             height: 87vh;
             display: flex;
             gap: 3rem;
             position: absolute;
-            top: 5rem;
+            top: 4rem;
     
-            .left-profile {
+            .Profile__Content--left {
                 border-radius: var(--border-radius-2);
                 width: 20rem;
                 background: var(--clr-neutral_light-100);
@@ -32,7 +33,7 @@
                 padding-top: 4rem;
                 gap: 1.6rem;
 
-                .photo-profile {
+                .Profile__Photo {
                     width: 11rem;
                     height: 11rem;
                     border-radius: 11rem;
@@ -48,7 +49,7 @@
                     }
                 }
 
-                .name-profile {
+                .Profile__Name {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -65,7 +66,7 @@
                     }
                 }
 
-                .profile-tabs {
+                .Profile__Tabs {
                     display: flex;
                     flex-direction: column;
                     position: relative;
@@ -131,7 +132,7 @@
                 }
             }
     
-            .right-profile {
+            .Profile__Content--right {
                 border-radius: var(--border-radius-2);
                 width: 35rem;
                 background: var(--clr-neutral_light-100);
@@ -254,12 +255,12 @@
         gap: 2rem;
     }
 
-    .Service_list {
+    .Service__List {
         display: flex;
         flex-direction: column;
         gap: .5rem;
 
-        .item {
+        &--item {
             background: var(--clr-neutral_light-100);
             display: flex;
             align-items: center;
@@ -335,9 +336,8 @@
     }
 }
 
-
 /***************** SECTION SUPPORT ****************/
-.support_section {
+.Support__Section {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -345,7 +345,7 @@
     padding: 1.5rem 1.5rem 0rem 1.5rem;
     background: var(--clr-neutral_light-300);
 
-    .main {
+    .Support__Main {
         display: flex;
         flex-direction: column;
         gap: 1.23rem;
@@ -353,6 +353,21 @@
         color: var(--clr-primary-100);
 
         div {
+            & > div {
+                margin-top: 2rem;
+                display: flex;
+                justify-content: start;
+
+                &:first-of-type {
+                    text-decoration: underline;
+                }
+
+                &:last-of-type {
+                    display: flex;
+                    justify-content: start;
+                }
+            }
+
             ul {
                 display: flex;
                 flex-direction: column;

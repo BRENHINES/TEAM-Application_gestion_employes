@@ -282,10 +282,11 @@ h2,
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.3rem;
   background: var(--clr-neutral_light-100);
   padding: 1rem 0rem;
   box-shadow: var(--box-shadow);
+  padding: 1rem;
   transition: all 300ms ease;
 }
 .Section__Card--Departemnt:hover,
@@ -354,6 +355,10 @@ h2,
 .Section__Card--Departemnt .Profile__Stats .Stat p,
 .Section__Card--Employee .Profile__Stats .Stat p {
   font-size: var(--fs-400);
+}
+.Section__Card--Departemnt .Profile__Desc,
+.Section__Card--Employee .Profile__Desc {
+  font-family: "Roboto", sans-serif;
 }
 .Section__Card--Departemnt .progress_bar,
 .Section__Card--Employee .progress_bar {
@@ -450,28 +455,29 @@ form .Form__Field label {
 }
 
 /***************** SECTION PROFILE ****************/
-.profile-section {
+.Profile__Section {
   height: 100vh;
   background: var(--clr-neutral_light-300);
+  overflow: hidden;
 }
-.profile-section .cover {
+.Profile__Section .Profile__Cover {
   position: relative;
   height: 30vh;
   background: var(--clr-primary-100) no-repeat;
   background-size: cover;
 }
-.profile-section .profile-container {
+.Profile__Section .Profile__Container {
   display: flex;
   justify-content: center;
 }
-.profile-section .profile-container .main-profile {
+.Profile__Section .Profile__Container .Profile__Content--Main {
   height: 87vh;
   display: flex;
   gap: 3rem;
   position: absolute;
-  top: 5rem;
+  top: 4rem;
 }
-.profile-section .profile-container .main-profile .left-profile {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left {
   border-radius: var(--border-radius-2);
   width: 20rem;
   background: var(--clr-neutral_light-100);
@@ -482,7 +488,7 @@ form .Form__Field label {
   padding-top: 4rem;
   gap: 1.6rem;
 }
-.profile-section .profile-container .main-profile .left-profile .photo-profile {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Photo {
   width: 11rem;
   height: 11rem;
   border-radius: 11rem;
@@ -492,30 +498,30 @@ form .Form__Field label {
   align-items: center;
   border: 5px solid var(--clr-primary-100);
 }
-.profile-section .profile-container .main-profile .left-profile .photo-profile img {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Photo img {
   width: 8rem;
   height: 8rem;
 }
-.profile-section .profile-container .main-profile .left-profile .name-profile {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Name {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.profile-section .profile-container .main-profile .left-profile .name-profile h1 {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Name h1 {
   font-size: var(--fs-500);
   color: var(--clr-primary-100);
 }
-.profile-section .profile-container .main-profile .left-profile .name-profile h2 {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Name h2 {
   font-size: var(--fs-400);
   color: var(--clr-neutral_dark-500);
 }
-.profile-section .profile-container .main-profile .left-profile .profile-tabs {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Tabs {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.profile-section .profile-container .main-profile .left-profile .profile-tabs a {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Tabs a {
   color: var(--clr-primary-200);
   display: flex;
   margin-left: 1rem;
@@ -529,43 +535,43 @@ form .Form__Field label {
   border-radius: 20px 20px 20px 20px;
   transition: all 300ms ease;
 }
-.profile-section .profile-container .main-profile .left-profile .profile-tabs a.active {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Tabs a.active {
   background: var(--clr-primary-100);
   color: var(--clr-neutral_light-100);
   margin-left: 0;
   border-radius: 20px 20px 20px 20px;
   transition: all 300ms ease;
 }
-.profile-section .profile-container .main-profile .left-profile .profile-tabs a.active i {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Tabs a.active i {
   color: var(--clr-neutral_light-100);
   margin-left: calc(1rem - 3px);
 }
-.profile-section .profile-container .main-profile .left-profile .profile-tabs a.active h3 {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Tabs a.active h3 {
   color: var(--clr-neutral_light-100);
 }
-.profile-section .profile-container .main-profile .left-profile .profile-tabs a:hover {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Tabs a:hover {
   background: var(--clr-primary-100);
   color: var(--clr-neutral_light-100);
   margin-left: 0;
   transition: all 300ms ease;
   border-radius: 20px 20px 20px 20px;
 }
-.profile-section .profile-container .main-profile .left-profile .profile-tabs a:hover > i {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Tabs a:hover > i {
   margin-left: 1rem;
 }
-.profile-section .profile-container .main-profile .left-profile .profile-tabs a:hover h3 {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Tabs a:hover h3 {
   color: var(--clr-neutral_light-100);
   transition: all 300ms ease;
 }
-.profile-section .profile-container .main-profile .left-profile .profile-tabs a i {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Tabs a i {
   font-size: 1.6rem;
   transition: all 300ms ease;
 }
-.profile-section .profile-container .main-profile .left-profile .profile-tabs a h3 {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--left .Profile__Tabs a h3 {
   font-weight: 400;
   font-family: "Roboto condensed";
 }
-.profile-section .profile-container .main-profile .right-profile {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--right {
   border-radius: var(--border-radius-2);
   width: 35rem;
   background: var(--clr-neutral_light-100);
@@ -576,7 +582,7 @@ form .Form__Field label {
   column-gap: 2rem;
   row-gap: 1rem;
 }
-.profile-section .profile-container .main-profile .right-profile p {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--right p {
   display: flex;
   flex-direction: column;
   font-size: var(--fs-400);
@@ -585,7 +591,7 @@ form .Form__Field label {
   gap: 0.4rem;
   color: var(--clr-primary-100);
 }
-.profile-section .profile-container .main-profile .right-profile p span {
+.Profile__Section .Profile__Container .Profile__Content--Main .Profile__Content--right p span {
   font-weight: 400;
   margin-left: 0.6rem;
   color: var(--clr-neutral_dark-500);
@@ -670,12 +676,12 @@ form .Form__Field label {
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
 }
-.Section .Service_list {
+.Section .Service__List {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.Section .Service_list .item {
+.Section .Service__List--item {
   background: var(--clr-neutral_light-100);
   display: flex;
   align-items: center;
@@ -689,26 +695,26 @@ form .Form__Field label {
   margin: 0 auto;
   padding-left: 2rem;
 }
-.Section .Service_list .item:nth-child(n+2) {
+.Section .Service__List--item:nth-child(n+2) {
   padding-left: 4rem;
   padding-right: 4rem;
 }
-.Section .Service_list .item:nth-child(n+2):hover {
+.Section .Service__List--item:nth-child(n+2):hover {
   padding-right: 5.5rem;
 }
-.Section .Service_list .item:first-child {
+.Section .Service__List--item:first-child {
   box-shadow: none;
   border-bottom: 4px solid var(--clr-primary-100);
 }
-.Section .Service_list .item:hover {
+.Section .Service__List--item:hover {
   box-shadow: none;
 }
-.Section .Service_list .item:hover .right h3 span {
+.Section .Service__List--item:hover .right h3 span {
   transform: translateX(-2.8rem);
   opacity: 1;
   transition: all 300ms ease;
 }
-.Section .Service_list .item .right {
+.Section .Service__List--item .right {
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -717,21 +723,21 @@ form .Form__Field label {
   font-size: var(--fs-300);
   position: relative;
 }
-.Section .Service_list .item .right div {
+.Section .Service__List--item .right div {
   display: flex;
   justify-content: center;
 }
-.Section .Service_list .item .right h3 {
+.Section .Service__List--item .right h3 {
   display: flex;
   justify-content: center;
 }
-.Section .Service_list .item .right h3 span {
+.Section .Service__List--item .right h3 span {
   position: absolute;
   right: -7rem;
   opacity: 0;
   transition: all 300ms ease;
 }
-.Section .Service_list .item .icon {
+.Section .Service__List--item .icon {
   padding: 0.6rem;
   color: #fff;
   border-radius: 50%;
@@ -740,7 +746,7 @@ form .Form__Field label {
 }
 
 /***************** SECTION SUPPORT ****************/
-.support_section {
+.Support__Section {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -748,32 +754,44 @@ form .Form__Field label {
   padding: 1.5rem 1.5rem 0rem 1.5rem;
   background: var(--clr-neutral_light-300);
 }
-.support_section .main {
+.Support__Section .Support__Main {
   display: flex;
   flex-direction: column;
   gap: 1.23rem;
   font-size: calc(var(--fs-400) + 3px);
   color: var(--clr-primary-100);
 }
-.support_section .main div ul {
+.Support__Section .Support__Main div > div {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: start;
+}
+.Support__Section .Support__Main div > div:first-of-type {
+  text-decoration: underline;
+}
+.Support__Section .Support__Main div > div:last-of-type {
+  display: flex;
+  justify-content: start;
+}
+.Support__Section .Support__Main div ul {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
   padding-top: 1rem;
 }
-.support_section .main div ul li:first-child {
+.Support__Section .Support__Main div ul li:first-child {
   padding-top: 10px;
 }
-.support_section .main div span {
+.Support__Section .Support__Main div span {
   color: var(--clr-secondary-100);
   cursor: pointer;
   transition: all 300ms ease;
 }
-.support_section .main div span:hover {
+.Support__Section .Support__Main div span:hover {
   text-decoration: underline;
   transition: all 300ms ease;
 }
-.support_section .main div:last-child {
+.Support__Section .Support__Main div:last-child {
   display: flex;
   gap: 1rem;
   align-items: center;

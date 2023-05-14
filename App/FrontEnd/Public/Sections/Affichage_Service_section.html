@@ -4,23 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!--Importation du fichier CSS-->
     <link rel="stylesheet" href="../SASS/style.css">
-
     <!--Importation de Boxicons-->
     <link rel="stylesheet" href="../Assets/Boxicons-2.1.4/css/boxicons.min.css">
-
     <title>Service</title>
 </head>
 <body>
-    
     <section class="Section">
         <div class="Section__content">
             <div>
                 <a href="#Modal" class="js-modal">
                     <i class="bx bx-folder-plus bx-xs"></i>
-                    Add
+                    Ajouter
                 </a>
                 <aside class="Modal" id="Modal" aria-hidden="true" role="dialog" aria-labelledby="false" style="display:none;">
                     <div class="Modal__Wrapper js-modal-stop">
@@ -36,8 +32,8 @@
         <div class="Section__Title">
             <h3>Les services</h3>
         </div>
-        <div class="Section__CardList">
-            <div class="item">
+        <div class="Service__List">
+            <div class="Service__List--item">
                 <div class="right">
                     <div class="info">
                         <h3>Identifiant</h3>
@@ -47,7 +43,7 @@
                     <h3>Département</h3>
                 </div>
             </div>
-            <div class="item">
+            <div class="Service__List--item">
                 <div class="right">
                     <div class="info">
                         <h3>01</h3>
@@ -57,18 +53,17 @@
                     <h3>
                         DSI
                         <span>
-                            <i class="fa-solid fa-xmark"></i>
-                            <i class="fa-solid fa-xmark"></i>
-                            <i class="fa-solid fa-xmark"></i>
+                            <i class="bx bxs-folder"></i>
+                            <i class="bx bxs-folder"></i>
+                            <i class="bx bxs-folder"></i>
                         </span>
                     </h3>
                 </div>
-                
             </div>           
         </div>
     </section>
 
-    <!--Import de la librairie GSAP-->
+    <!--Importation de la librairie GSAP-->
     <script src="../Source/Libs/gsap.min.js"></script>
     <script src="../Source/JS/app.js"></script>
 </body>
