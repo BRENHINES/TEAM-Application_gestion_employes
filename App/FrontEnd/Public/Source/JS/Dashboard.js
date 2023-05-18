@@ -1,44 +1,15 @@
-let modal = null
 let stats_card = document.querySelectorAll(".Main__Stastistics--Card")
 let Emp_List = document.querySelectorAll("tr")
 let Project_List = document.querySelectorAll(".Project")
 let Meet_List = document.querySelectorAll(".item")
 let text = gsap.timeline();
+let LogOut = document.querySelector(".LogOut")
+let DashPopup = document.querySelector(".Dashboard__Popup")
+let DashPopupClose = document.querySelector(".Btn__Close")
+let DashPopupCancel = document.querySelector(".Cancel")
 
-// FEAT: Fonction pour la gestion des Modal
-let openModal = function (e) {
-    e.preventDefault();
-    const target = document.querySelector(e.target.getAttribute('href'));
-    target.style.display = null
-    target.removeAttribute('aria-hidden')
-    target.setAttribute('aria-modal', 'true')
-    modal = target
-    modal.addEventListener('click', closeModal)
-    modal.querySelector('js-modal-close').addEventListener('click', closeModal)
-    modal.querySelector('js-modal-stop').addEventListener('click', stopPropagation)
-}
-
-let closeModal = function (e) {
-    if (modal === null) return 
-    e.preventDefault()
-    window.setTimeout(function () {
-        modal.style.display = "none"
-        modal = null
-    }, 500)
-    modal.setAttribute('aria-hidden', 'true')
-    modal.removeAttribute('aria-modal')
-    modal.removeEventListener('click', closeModal)
-    modal.querySelector('js-modal-close').removeEventListener('click', closeModal)
-    modal.querySelector('js-modal-stop').removeEventListener('click', stopPropagation)
-}
-
-const stopPropagation = function (e) {
-    e.stopPropagation()
-}
-
-document.querySelectorAll('.js-modal').forEach(a => {
-    a.addEventListener('click', openModal)
-})
+// Initialisation des Sections
+let Dashboard = document.querySelector(".Dash")
 
 // FEAT: Fonction pour la gestion des onglets clickables
 function _class(name) {
@@ -82,5 +53,22 @@ text.from(".Part__Title", 1.8, {
     stagger: {
         amount: 0.3
     }
+})
+
+// FEAT: Popup de déconnexion
+LogOut.addEventListener("click", function() {
+    DashPopup.classList.add("active")
+})
+
+DashPopupClose.addEventListener("click", function() {
+    DashPopup.classList.remove("active")
+    LogOut.classList.remove("active")
+    Dashboard.classList.add("active")
+})
+
+DashPopupCancel.addEventListener("click", function() {
+    DashPopup.classList.remove("active")
+    LogOut.classList.remove("active")
+    Dashboard.classList.add("active")
 })
 

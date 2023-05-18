@@ -37,4 +37,40 @@
         }
 
     }
+
+    &__Close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 15px;
+        height: 15px;
+        background: var(--clr-secondary-100);
+        color: var(--clr-neutral_light-100);
+        text-align: center;
+        line-height: 15px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    &__Popup {
+        display: flex;
+        justify-content: space-around;
+        font-family: 'Roboto', sans-serif;
+        font-size: var(--fs-350);
+        color: var(--clr-primary-100);
+        font-weight: 600;
+        cursor: pointer;
+
+        .Quit {
+            background: var(--clr-secondary-100);
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        .Cancel {
+            background: var(--clr-neutral_dark-100);
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+    }
 }
