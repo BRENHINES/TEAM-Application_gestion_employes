@@ -1,49 +1,50 @@
-let modal = null
 let text = gsap.timeline();
 let Card_Departemnt = document.querySelectorAll(".Section__Card--Departemnt")
 let Card_Employe = document.querySelectorAll(".Section__Card--Employee")
 let Card_Service = document.querySelectorAll(".Service__List--item")
 
-let openModal = function (e) {
-    e.preventDefault()
-    const target = document.querySelector(e.target.getAttribute('href'))
-    target.style.display = null
-    target.removeAttribute('aria-hidden')
-    target.setAttribute('aria-modal', 'true')
-    modal = target
-    modal.addEventListener('click', closeModal)
-    modal.querySelector('js-modal-close').addEventListener('click', closeModal);
-    modal.querySelector('js-modal-stop').addEventListener('click', stopPropagation);
-}
+let PopupCardOpen = document.querySelector(".Section__Card--Departemnt > div")
 
-const closeModal = function (e) {
-    if (modal === null) return 
-    e.preventDefault()
-    window.setTimeout(function () {
-        modal.style.display = "none"
-        modal = null
-    }, 500)
-    modal.setAttribute('aria-hidden', 'true')
-    modal.removeAttribute('aria-modal')
-    modal.removeEventListener('click', closeModal)
-    modal.querySelector('js-modal-close').removeEventListener('click', closeModal);
-    modal.querySelector('js-modal-stop').removeEventListener('click', stopPropagation);
-}
+// Initialisation des Popups
+let Btn__PopupOpen = document.querySelector(".Btn__PopupOpen")
+let Popup = document.querySelector(".Popup")
+let PopupClose = document.querySelector(".Btn__Close")
+let PopupCancel = document.querySelector(".Cancel")
+let PopupCard = document.querySelector(".Card__Popup")
+let PopupMod = document.querySelector(".PopupMod")
 
-const stopPropagation = function (e) {
-    e.stopPropagation()
-}
+let Cancel = document.querySelector(".Cancel--Card")
+let Close = document.querySelector(".Close--Card")
 
-document.querySelectorAll('.js-modal').forEach(a => {
-    a.addEventListener('click', openModal)
+let Pen = document.querySelector(".bxs-pen")
+let Trash = document.querySelector(".bxs-trash")
+
+Btn__PopupOpen.addEventListener("click", function() {
+    Popup.classList.add("active");
 })
 
-window.addEventListener('keydown', function (e) {
-    if (e.key === "Escape" || e.key === "Esc") {
-        closeModal(e)
-    }
+PopupClose.addEventListener("click", function() {
+    Popup.classList.remove("active");
 })
 
+PopupCancel.addEventListener("click", function() {
+    Popup.classList.remove("active");
+})
+
+Close.addEventListener("click", function() {
+    PopupCard.classList.remove("active")
+})
+
+Cancel.addEventListener("click", function() {
+    PopupCard.classList.remove("active")
+})
+
+PopupCardOpen.addEventListener("click", function() {
+    PopupCard.classList.add("active");
+})
+
+
+// FEAT: Animations GSAP sur les composents
 text.from(".Section__Title", 1.8, {
     y: -20,
     ease: "power4.out",

@@ -14,19 +14,60 @@
     <section class="Section">
         <div class="Section__content">
             <div>
-                <a href="#Modal" class="js-modal">
+                <a href="#" class="Btn__PopupOpen">
                     <i class="bx bx-folder-plus bx-xs"></i>
                     Ajouter
                 </a>
-                <aside class="Modal" id="Modal" aria-hidden="true" role="dialog" aria-labelledby="false" style="display:none;">
-                    <div class="Modal__Wrapper js-modal-stop">
-                        <h2>
-                            <i class="bx bx-folder-plus bx-sm"></i>
-                            Créer un nouveau Service
-                        </h2>
-                        <a href="#" class="js-close-modal">Close</a>
+                <div class="Popup">
+                    <span class="Popup--Back">
+                    </span>
+                    <div class="Popup--Content">
+                        <div class="Btn__Close">&times;</div>
+                        <h2>Ajouter un service</h2>
+                        <p>Veuillez remplir tous ces champs pour enrégistrer un nouveau <span>service.</span></p>
+                        <div class="Fields">
+                            <div class="Field__Element">
+                                <input type="text" id="name" placeholder="Nom du service">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="text" id="text" placeholder="Nom du Chef du service">
+                            </div>
+                        </div>
+                        <div class="Btn__Popup">
+                            <div class="Quit">
+                                Valider
+                            </div>
+                            <div class="Cancel">
+                                Annuler
+                            </div>
+                        </div>
                     </div>
-                </aside>
+                </div>
+                <div class="PopupMod">
+                    <span class="Popup--Back">
+                    </span>
+                    <div class="Popup--Content">
+                        <div class="Btn__Close">&times;</div>
+                        <h2>Modifier un service</h2>
+                        <p>Veuillez remplir tous ces champs pour enrégistrer un nouveau <span>service.</span></p>
+                        <div class="Fields">
+                            <div class="Field__Element">
+                                <input type="text" id="name" placeholder="Nom du service">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="text" id="text" placeholder="Nom du Chef du service">
+                            </div>
+                        </div>
+                        <div class="Btn__Popup">
+                            <div class="Quit">
+                                Valider
+                            </div>
+                            <div class="Cancel-Field">
+                                Annuler
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="Section__Title">
@@ -53,9 +94,8 @@
                     <h3>
                         DSI
                         <span>
-                            <i class="bx bxs-folder"></i>
-                            <i class="bx bxs-folder"></i>
-                            <i class="bx bxs-folder"></i>
+                            <i class="bx bxs-pen"></i>
+                            <i class="bx bxs-trash"></i>
                         </span>
                     </h3>
                 </div>

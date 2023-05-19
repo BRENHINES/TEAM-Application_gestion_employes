@@ -1,0 +1,32 @@
+@use '../Abstract/Mixins' as *;
+
+.Dashboard__Popup,
+.Popup,
+.Card__Popup,
+.PopupMod {
+
+    .Dashboard__Popup--Back,
+    .Popup--Back {
+        @include PopupBack; 
+    }
+
+    .Dashboard__Popup--Content {
+        @include PopupContent;
+    }
+
+    .Popup--Content {
+        @include PopupContent;
+        width: 500px;
+    }
+
+    &.active > .Dashboard__Popup--Back,
+    &.active > .Popup--Back {
+        @include PopupBackActive;
+    }
+
+    &.active > .Dashboard__Popup--Content,
+    &.active > .Popup--Content {
+        @include PopupContentActive;
+    }
+}
+

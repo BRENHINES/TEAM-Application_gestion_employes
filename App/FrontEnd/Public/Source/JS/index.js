@@ -1,7 +1,3 @@
-//let container = document.getElementById('container');
-//let overlayCon = document.getElementById('overlayCon');
-//let overlayBtn = document.getElementById('overlayBtn');
-
 // Sidebar switchable tabs
 function _class(name) {
     return document.getElementsByClassName(name);

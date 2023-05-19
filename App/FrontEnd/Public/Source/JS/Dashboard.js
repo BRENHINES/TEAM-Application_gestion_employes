@@ -3,10 +3,13 @@ let Emp_List = document.querySelectorAll("tr")
 let Project_List = document.querySelectorAll(".Project")
 let Meet_List = document.querySelectorAll(".item")
 let text = gsap.timeline();
+
+// Initialisation des Popups
 let LogOut = document.querySelector(".LogOut")
 let DashPopup = document.querySelector(".Dashboard__Popup")
 let DashPopupClose = document.querySelector(".Btn__Close")
 let DashPopupCancel = document.querySelector(".Cancel")
+let Graph = document.querySelector(".Graph")
 
 // Initialisation des Sections
 let Dashboard = document.querySelector(".Dash")
@@ -26,7 +29,7 @@ for(let i=0; i<tabs.length; i++){
 }
 
 // FEAT: Animations sur les cards du dashboard
-gsap.from([stats_card, ".Main__Projects > div", "table"], {
+gsap.from([stats_card, ".Main__Projects > div", "table", Graph], {
     duration: 4,
     scale: 0.1,
     opacity: 0,

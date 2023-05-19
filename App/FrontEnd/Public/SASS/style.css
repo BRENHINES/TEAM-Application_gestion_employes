@@ -307,8 +307,8 @@ h2,
   font-size: var(--fs-500);
 }
 
-.Section__Card--Departemnt,
-.Section__Card--Employee {
+.Section__Card--Departemnt > div,
+.Section__Card--Employee > div {
   border-radius: var(--border-radius-2);
   display: flex;
   flex-direction: column;
@@ -321,20 +321,20 @@ h2,
   padding: 1rem;
   transition: all 300ms ease;
 }
-.Section__Card--Departemnt:hover,
-.Section__Card--Employee:hover {
+.Section__Card--Departemnt > div:hover,
+.Section__Card--Employee > div:hover {
   transition: all 300ms ease;
   box-shadow: none;
 }
-.Section__Card--Departemnt .Profile__Picture img,
-.Section__Card--Employee .Profile__Picture img {
+.Section__Card--Departemnt > div .Profile__Picture img,
+.Section__Card--Employee > div .Profile__Picture img {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
   border: 5px solid var(--clr-primary-100);
 }
-.Section__Card--Departemnt .Profile__Picture p,
-.Section__Card--Employee .Profile__Picture p {
+.Section__Card--Departemnt > div .Profile__Picture p,
+.Section__Card--Employee > div .Profile__Picture p {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -346,93 +346,96 @@ h2,
   border-radius: 50%;
   border: 3px solid var(--clr-primary-100);
 }
-.Section__Card--Departemnt .Profile__Name,
-.Section__Card--Employee .Profile__Name {
+.Section__Card--Departemnt > div .Profile__Name,
+.Section__Card--Employee > div .Profile__Name {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: center;
 }
-.Section__Card--Departemnt .Profile__Name h2,
-.Section__Card--Employee .Profile__Name h2 {
+.Section__Card--Departemnt > div .Profile__Name h2,
+.Section__Card--Employee > div .Profile__Name h2 {
   font-size: var(--fs-500);
   font-family: "Bebas Neue", sans-serif;
   color: var(--clr-secondary-100);
 }
-.Section__Card--Departemnt .Profile__Name h3,
-.Section__Card--Employee .Profile__Name h3 {
+.Section__Card--Departemnt > div .Profile__Name h3,
+.Section__Card--Employee > div .Profile__Name h3 {
   font-size: var(--fs-350);
   color: var(--clr-neutral_light-600);
 }
-.Section__Card--Departemnt .Profile__Stats,
-.Section__Card--Employee .Profile__Stats {
+.Section__Card--Departemnt > div .Profile__Stats,
+.Section__Card--Employee > div .Profile__Stats {
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 2.5rem;
   margin-top: 1rem;
 }
-.Section__Card--Departemnt .Profile__Stats .Stat,
-.Section__Card--Employee .Profile__Stats .Stat {
+.Section__Card--Departemnt > div .Profile__Stats .Stat,
+.Section__Card--Employee > div .Profile__Stats .Stat {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.6rem;
 }
-.Section__Card--Departemnt .Profile__Stats .Stat h5,
-.Section__Card--Employee .Profile__Stats .Stat h5 {
+.Section__Card--Departemnt > div .Profile__Stats .Stat h5,
+.Section__Card--Employee > div .Profile__Stats .Stat h5 {
   font-size: calc(var(--fs-300) + 3px);
 }
-.Section__Card--Departemnt .Profile__Stats .Stat p,
-.Section__Card--Employee .Profile__Stats .Stat p {
+.Section__Card--Departemnt > div .Profile__Stats .Stat p,
+.Section__Card--Employee > div .Profile__Stats .Stat p {
   font-size: var(--fs-400);
 }
-.Section__Card--Departemnt .Profile__Desc,
-.Section__Card--Employee .Profile__Desc {
+.Section__Card--Departemnt > div .Profile__Desc,
+.Section__Card--Employee > div .Profile__Desc {
   font-family: "Roboto", sans-serif;
 }
-.Section__Card--Departemnt .progress_bar,
-.Section__Card--Employee .progress_bar {
-  width: 86%;
-  margin: 0 auto;
-  border-radius: 10px;
-  height: 10px;
-  background: black;
-}
-.Section__Card--Departemnt .autor,
-.Section__Card--Employee .autor {
+.Section__Card--Departemnt > div .autor,
+.Section__Card--Employee > div .autor {
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 5rem;
 }
-.Section__Card--Departemnt .autor img,
-.Section__Card--Employee .autor img {
+.Section__Card--Departemnt > div .autor img,
+.Section__Card--Employee > div .autor img {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
 }
-.Section__Card--Departemnt .autor .icons,
-.Section__Card--Employee .autor .icons {
+.Section__Card--Departemnt > div .autor .icons,
+.Section__Card--Employee > div .autor .icons {
   display: flex;
   gap: 1rem;
 }
+.Section__Card--Departemnt > div .autor .icons i,
+.Section__Card--Employee > div .autor .icons i {
+  color: var(--clr-primary-100);
+  transition: all 300ms ease-in-out;
+}
+.Section__Card--Departemnt > div .autor .icons i:hover,
+.Section__Card--Employee > div .autor .icons i:hover {
+  color: var(--clr-secondary-100);
+  transition: all 300ms ease-in-out;
+}
 
 .Section__Card--Employee .Profile__ModificationIcons {
+  width: 100%;
   display: flex;
-  gap: 1.3rem;
-  align-items: center;
+  gap: 3.5rem;
   justify-content: center;
+  margin: 1rem 0rem 1rem 0rem;
 }
-.Section__Card--Employee .Profile__ModificationIcons .modal-div a {
+.Section__Card--Employee .Profile__ModificationIcons a {
   background-color: transparent;
   color: var(--clr-primary-100);
   width: 10px;
   height: 10px;
   transition: all 60ms ease;
 }
-.Section__Card--Employee .Profile__ModificationIcons .modal-div a:hover {
+.Section__Card--Employee .Profile__ModificationIcons a:hover {
   color: var(--clr-secondary-100);
   transition: all 60ms ease;
 }
@@ -484,6 +487,257 @@ form .Form__Field label {
   height: 2px;
   background: var(--clr-linear-grad-100);
   transition: 0.3s;
+}
+
+.Dashboard__Popup .Dashboard__Popup--Back,
+.Dashboard__Popup .Popup--Back,
+.Popup .Dashboard__Popup--Back,
+.Popup .Popup--Back,
+.Card__Popup .Dashboard__Popup--Back,
+.Card__Popup .Popup--Back,
+.PopupMod .Dashboard__Popup--Back,
+.PopupMod .Popup--Back {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: var(--clr-neutral_dark-100);
+  opacity: 0;
+  z-index: 150;
+  display: none;
+  transition: opacity 200ms ease-in-out 0ms;
+}
+.Dashboard__Popup .Dashboard__Popup--Content,
+.Popup .Dashboard__Popup--Content,
+.Card__Popup .Dashboard__Popup--Content,
+.PopupMod .Dashboard__Popup--Content {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  top: -150%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.15);
+  width: 300px;
+  padding: 20px 30px;
+  background: var(--clr-neutral_light-100);
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  opacity: 0;
+  z-index: 151;
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
+}
+.Dashboard__Popup .Dashboard__Popup--Content h2,
+.Popup .Dashboard__Popup--Content h2,
+.Card__Popup .Dashboard__Popup--Content h2,
+.PopupMod .Dashboard__Popup--Content h2 {
+  margin-top: 0.5rem;
+  font-size: var(--fs-500);
+  color: var(--clr-primary-100);
+}
+.Dashboard__Popup .Dashboard__Popup--Content p,
+.Popup .Dashboard__Popup--Content p,
+.Card__Popup .Dashboard__Popup--Content p,
+.PopupMod .Dashboard__Popup--Content p {
+  font-size: var(--fs-350);
+}
+.Dashboard__Popup .Dashboard__Popup--Content p span,
+.Popup .Dashboard__Popup--Content p span,
+.Card__Popup .Dashboard__Popup--Content p span,
+.PopupMod .Dashboard__Popup--Content p span {
+  color: var(--clr-secondary-100);
+  font-weight: 600;
+}
+.Dashboard__Popup .Dashboard__Popup--Content .Fields,
+.Popup .Dashboard__Popup--Content .Fields,
+.Card__Popup .Dashboard__Popup--Content .Fields,
+.PopupMod .Dashboard__Popup--Content .Fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+.Dashboard__Popup .Dashboard__Popup--Content .Fields .Field__Element,
+.Popup .Dashboard__Popup--Content .Fields .Field__Element,
+.Card__Popup .Dashboard__Popup--Content .Fields .Field__Element,
+.PopupMod .Dashboard__Popup--Content .Fields .Field__Element {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+.Dashboard__Popup .Dashboard__Popup--Content .Fields .Field__Element input,
+.Dashboard__Popup .Dashboard__Popup--Content .Fields .Field__Element textarea,
+.Popup .Dashboard__Popup--Content .Fields .Field__Element input,
+.Popup .Dashboard__Popup--Content .Fields .Field__Element textarea,
+.Card__Popup .Dashboard__Popup--Content .Fields .Field__Element input,
+.Card__Popup .Dashboard__Popup--Content .Fields .Field__Element textarea,
+.PopupMod .Dashboard__Popup--Content .Fields .Field__Element input,
+.PopupMod .Dashboard__Popup--Content .Fields .Field__Element textarea {
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  height: 50px;
+  border: none;
+  border-bottom: 3px solid var(--clr-neutral_dark-100);
+  outline: none;
+  transition: all 300ms ease-in-out;
+}
+.Dashboard__Popup .Dashboard__Popup--Content .Fields .Field__Element input:focus,
+.Dashboard__Popup .Dashboard__Popup--Content .Fields .Field__Element textarea:focus,
+.Popup .Dashboard__Popup--Content .Fields .Field__Element input:focus,
+.Popup .Dashboard__Popup--Content .Fields .Field__Element textarea:focus,
+.Card__Popup .Dashboard__Popup--Content .Fields .Field__Element input:focus,
+.Card__Popup .Dashboard__Popup--Content .Fields .Field__Element textarea:focus,
+.PopupMod .Dashboard__Popup--Content .Fields .Field__Element input:focus,
+.PopupMod .Dashboard__Popup--Content .Fields .Field__Element textarea:focus {
+  border-bottom: 3px solid var(--clr-primary-100);
+  transition: all 500ms ease-in-out;
+}
+.Dashboard__Popup .Dashboard__Popup--Content .Fields .Field__Element i,
+.Popup .Dashboard__Popup--Content .Fields .Field__Element i,
+.Card__Popup .Dashboard__Popup--Content .Fields .Field__Element i,
+.PopupMod .Dashboard__Popup--Content .Fields .Field__Element i {
+  color: var(--clr-primary-100);
+  transition: all 300ms ease;
+}
+.Dashboard__Popup .Dashboard__Popup--Content .Fields .Field__Element i:hover,
+.Popup .Dashboard__Popup--Content .Fields .Field__Element i:hover,
+.Card__Popup .Dashboard__Popup--Content .Fields .Field__Element i:hover,
+.PopupMod .Dashboard__Popup--Content .Fields .Field__Element i:hover {
+  color: var(--clr-secondary-100);
+  transition: all 300ms ease;
+}
+.Dashboard__Popup .Popup--Content,
+.Popup .Popup--Content,
+.Card__Popup .Popup--Content,
+.PopupMod .Popup--Content {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  top: -150%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.15);
+  width: 300px;
+  padding: 20px 30px;
+  background: var(--clr-neutral_light-100);
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  opacity: 0;
+  z-index: 151;
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
+  width: 500px;
+}
+.Dashboard__Popup .Popup--Content h2,
+.Popup .Popup--Content h2,
+.Card__Popup .Popup--Content h2,
+.PopupMod .Popup--Content h2 {
+  margin-top: 0.5rem;
+  font-size: var(--fs-500);
+  color: var(--clr-primary-100);
+}
+.Dashboard__Popup .Popup--Content p,
+.Popup .Popup--Content p,
+.Card__Popup .Popup--Content p,
+.PopupMod .Popup--Content p {
+  font-size: var(--fs-350);
+}
+.Dashboard__Popup .Popup--Content p span,
+.Popup .Popup--Content p span,
+.Card__Popup .Popup--Content p span,
+.PopupMod .Popup--Content p span {
+  color: var(--clr-secondary-100);
+  font-weight: 600;
+}
+.Dashboard__Popup .Popup--Content .Fields,
+.Popup .Popup--Content .Fields,
+.Card__Popup .Popup--Content .Fields,
+.PopupMod .Popup--Content .Fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+.Dashboard__Popup .Popup--Content .Fields .Field__Element,
+.Popup .Popup--Content .Fields .Field__Element,
+.Card__Popup .Popup--Content .Fields .Field__Element,
+.PopupMod .Popup--Content .Fields .Field__Element {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+.Dashboard__Popup .Popup--Content .Fields .Field__Element input,
+.Dashboard__Popup .Popup--Content .Fields .Field__Element textarea,
+.Popup .Popup--Content .Fields .Field__Element input,
+.Popup .Popup--Content .Fields .Field__Element textarea,
+.Card__Popup .Popup--Content .Fields .Field__Element input,
+.Card__Popup .Popup--Content .Fields .Field__Element textarea,
+.PopupMod .Popup--Content .Fields .Field__Element input,
+.PopupMod .Popup--Content .Fields .Field__Element textarea {
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  height: 50px;
+  border: none;
+  border-bottom: 3px solid var(--clr-neutral_dark-100);
+  outline: none;
+  transition: all 300ms ease-in-out;
+}
+.Dashboard__Popup .Popup--Content .Fields .Field__Element input:focus,
+.Dashboard__Popup .Popup--Content .Fields .Field__Element textarea:focus,
+.Popup .Popup--Content .Fields .Field__Element input:focus,
+.Popup .Popup--Content .Fields .Field__Element textarea:focus,
+.Card__Popup .Popup--Content .Fields .Field__Element input:focus,
+.Card__Popup .Popup--Content .Fields .Field__Element textarea:focus,
+.PopupMod .Popup--Content .Fields .Field__Element input:focus,
+.PopupMod .Popup--Content .Fields .Field__Element textarea:focus {
+  border-bottom: 3px solid var(--clr-primary-100);
+  transition: all 500ms ease-in-out;
+}
+.Dashboard__Popup .Popup--Content .Fields .Field__Element i,
+.Popup .Popup--Content .Fields .Field__Element i,
+.Card__Popup .Popup--Content .Fields .Field__Element i,
+.PopupMod .Popup--Content .Fields .Field__Element i {
+  color: var(--clr-primary-100);
+  transition: all 300ms ease;
+}
+.Dashboard__Popup .Popup--Content .Fields .Field__Element i:hover,
+.Popup .Popup--Content .Fields .Field__Element i:hover,
+.Card__Popup .Popup--Content .Fields .Field__Element i:hover,
+.PopupMod .Popup--Content .Fields .Field__Element i:hover {
+  color: var(--clr-secondary-100);
+  transition: all 300ms ease;
+}
+.Dashboard__Popup.active > .Dashboard__Popup--Back, .Dashboard__Popup.active > .Popup--Back,
+.Popup.active > .Dashboard__Popup--Back,
+.Popup.active > .Popup--Back,
+.Card__Popup.active > .Dashboard__Popup--Back,
+.Card__Popup.active > .Popup--Back,
+.PopupMod.active > .Dashboard__Popup--Back,
+.PopupMod.active > .Popup--Back {
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
+  background: gray;
+  display: block;
+  transition: opacity 200ms ease-in-out 0ms;
+}
+.Dashboard__Popup.active > .Dashboard__Popup--Content, .Dashboard__Popup.active > .Popup--Content,
+.Popup.active > .Dashboard__Popup--Content,
+.Popup.active > .Popup--Content,
+.Card__Popup.active > .Dashboard__Popup--Content,
+.Card__Popup.active > .Popup--Content,
+.PopupMod.active > .Dashboard__Popup--Content,
+.PopupMod.active > .Popup--Content {
+  display: flex;
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 151;
+  transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
 }
 
 /***************** SECTION PROFILE ****************/
@@ -657,51 +911,9 @@ form .Form__Field label {
   font-size: var(--fs-350);
   font-weight: 600;
 }
-.Section .Section__content > div a.js-modal {
+.Section .Section__content > div a.Btn__PopupOpen {
   color: var(--clr-neutral_light-100);
   background: var(--clr-primary-100);
-}
-.Section .Section__content > div .Modal {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--clr-neutral_dark-500);
-  animation: fadeIn 0.3s both;
-}
-.Section .Section__content > div .Modal .Modal__Wrapper {
-  background-color: var(--clr-neutral_light-100);
-  max-width: calc(100vw - 20px);
-  max-height: calc(100vh - 20px);
-  padding: var(--card-padding);
-  border-radius: var(--border-radius-2);
-  overflow: auto;
-  animation: slideFromTop 0.5s both;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.Section .Section__content > div .Modal .Modal__Wrapper.dep {
-  width: 550px;
-}
-.Section .Section__content > div .Modal .Modal__Wrapper.emp {
-  width: 1050px;
-}
-.Section .Section__content > div .Modal .Modal__Wrapper .Modal__Content {
-  display: flex;
-  justify-content: center;
-  height: auto;
-  width: 100%;
-}
-.Section .Section__content > div .Modal[aria-hidden=true] {
-  animation: fadeOut 0.3s both;
-}
-.Section .Section__content > div .Modal[aria-hidden=true] .Modal__Wrapper {
-  animation: slideFromBottom 0.3s both;
 }
 .Section .Section__CardList {
   display: grid;
@@ -763,11 +975,19 @@ form .Form__Field label {
   display: flex;
   justify-content: center;
 }
-.Section .Service__List--item .right h3 span {
+.Section .Service__List--item .right h3 > span {
   position: absolute;
   right: -7rem;
   opacity: 0;
   transition: all 300ms ease;
+}
+.Section .Service__List--item .right h3 > span i {
+  transition: all 300ms ease-in-out;
+}
+.Section .Service__List--item .right h3 > span i:hover {
+  color: var(--clr-secondary-100);
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
 }
 .Section .Service__List--item .icon {
   padding: 0.6rem;
@@ -1004,56 +1224,6 @@ form .Form__Field label {
   width: 100vw;
   user-select: none;
   overflow-x: hidden;
-}
-.Dashboard__Wrapper .Dashboard__Popup .Dashboard__Popup--Back {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background: var(--clr-neutral_dark-100);
-  opacity: 0;
-  z-index: 150;
-  display: none;
-  transition: all 1s ease-in-out 200ms;
-}
-.Dashboard__Wrapper .Dashboard__Popup .Dashboard__Popup--Content {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
-  font-family: "Roboto", sans-serif;
-  top: -150%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.25);
-  width: 300px;
-  padding: 20px 30px;
-  background: var(--clr-neutral_light-100);
-  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  z-index: 151;
-  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
-}
-.Dashboard__Wrapper .Dashboard__Popup .Dashboard__Popup--Content h2 {
-  margin-top: 0.5rem;
-  font-size: var(--fs-500);
-  color: var(--clr-primary-100);
-}
-.Dashboard__Wrapper .Dashboard__Popup .Dashboard__Popup--Content p {
-  font-size: var(--fs-350);
-}
-.Dashboard__Wrapper .Dashboard__Popup.active > .Dashboard__Popup--Back {
-  width: 100%;
-  height: 100vh;
-  opacity: 0.5;
-  background: gray;
-  display: block;
-  transition: all 1s ease-in-out 200ms;
-}
-.Dashboard__Wrapper .Dashboard__Popup.active > .Dashboard__Popup--Content {
-  top: 50%;
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-  z-index: 151;
-  transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
 }
 .Dashboard__Wrapper .Dashboard__Container {
   display: grid;

@@ -14,77 +14,96 @@
     <section class="Section">
         <div class="Section__content">
             <div>
-                <a href="#Modal" class="js-modal">
-                    <i class="bx bx-plus"></i>
+                <a href="#" class="Btn__PopupOpen">
+                    <i class="bx bx-folder-plus bx-xs"></i>
                     Ajouter
                 </a>
-                <aside class="Modal" id="Modal" aria-hidden="true" role="dialog" aria-labelledby="false" style="display:none;">
-                    <div class="Modal__Wrapper js-modal-stop emp">
-                        <h2>
-                            Créer un nouvel employé
-                        </h2>
-                        <div class="Modal__Content">
-                            <form action="#">
-                                <div class="Form__Field">
-                                    <input type="text" placeholder="Nom" />
-                                    <label></label>
-                                </div>
-                                <div class="Form__Field">
-                                    <input type="date" placeholder="Date de naissance"/>
-                                    <label></label>
-                                </div>
-                                <div class="Form__Field">
-                                    <input type="text" placeholder="Sexe"/>
-                                    <label></label>
-                                </div>
-                                <div class="Form__Field">
-                                    <input type="email" placeholder="Email"/>
-                                    <label></label>
-                                </div>
-                                <div class="Form__Field">
-                                    <input type="text" placeholder="Adresse"/>
-                                    <label></label>
-                                </div>
-                                <div class="Form__Field">
-                                    <input type="text" placeholder="Service"/>
-                                    <label></label>
-                                </div>
-                            </form>
-
-                            <form action="#">
-                                <div class="Form__Field">
-                                    <input type="text" placeholder="Prenom"/>
-                                    <label></label>
-                                </div>
-                                <div class="Form__Field">
-                                    <input type="text" placeholder="Lieu de naissance"/>
-                                    <label></label>
-                                </div>
-                                <div class="Form__Field">
-                                    <input type="text" placeholder="Situation Matrimoniale"/>
-                                    <label></label>
-                                </div>
-                                <div class="Form__Field">
-                                    <input type="tel" placeholder="Contact"/>
-                                    <label></label>
-                                </div>
-                                <div class="Form__Field">
-                                    <input type="text" placeholder="Poste"/>
-                                    <label></label>
-                                </div>
-                                <div class="Form__Field">
-                                    <input type="number" placeholder="Salaire de base"/>
-                                    <label></label>
-                                </div>
-                            </form>
+                <div class="Popup">
+                    <span class="Popup--Back">
+                    </span>
+                    <div class="Popup--Content">
+                        <div class="Btn__Close">&times;</div>
+                        <h2>Ajouter un employé</h2>
+                        <p>Veuillez remplir tous ces champs pour enrégistrer un nouvel <span>employé.</span></p>
+                        <div class="Fields">
+                            <div class="Field__Element">
+                                <input type="text" name="nom" placeholder="Nom de l'employé">
+                                <input type="text" name="prenom" placeholder="Prénom de l'employé">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="date" name="Date" placeholder="Date de naissance">
+                                <input type="text" name="lieu" placeholder="Lieu de naissance">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="text" name="Sexe" placeholder="sexe">
+                                <input type="text" name="situation" placeholder="Situation Matrimoniale">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="Email" name="Eamil" placeholder="Email">
+                                <input type="tel" name="contact" placeholder="Contact">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="text" name="adresse" placeholder="adresse">
+                                <input type="text" name="Poste" placeholder="Poste">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="text" name="Service" placeholder="Service">
+                                <input type="number" name="salaire" placeholder="Salaire">
+                            </div>
                         </div>
-
-                        <div class="Btn__Container">
-                            <a href="#" class="js-close-modal">Annuler</a>
-                            <a href="#">Valider</a>
+                        <div class="Btn__Popup">
+                            <div class="Quit">
+                                Valider
+                            </div>
+                            <div class="Cancel">
+                                Annuler
+                            </div>
                         </div>
                     </div>
-                </aside>
+                </div>
+                <div class="Card__Popup">
+                    <span class="Popup--Back">
+                    </span>
+                    <div class="Popup--Content">
+                        <div class="Btn__Close Close--Card">&times;</div>
+                        <h2>Modifier un employé</h2>
+                        <p>Veuillez modifier un ou tous ces champs pour modifier cet <span>employé.</span></p>
+                        <div class="Fields">
+                            <div class="Field__Element">
+                                <input type="text" name="nom" placeholder="Nom de l'employé" value="DOE">
+                                <input type="text" name="prenom" placeholder="Prénom de l'employé" value="JOHN">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="date" name="Date" placeholder="Date de naissance" value="14/02/2002">
+                                <input type="text" name="lieu" placeholder="Lieu de naissance" value="pk17">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="text" name="Sexe" placeholder="sexe" value="Masculin">
+                                <input type="text" name="situation" placeholder="Situation Matrimoniale" value="Marié">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="Email" name="Eamil" placeholder="Email" value="johndoe@gmail.com">
+                                <input type="tel" name="contact" placeholder="Contact" value="666666">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="text" name="adresse" placeholder="adresse" value="pk17">
+                                <input type="text" name="Poste" placeholder="Poste" value="RH">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="text" name="Service" placeholder="Service" value="RH">
+                                <input type="number" name="salaire" placeholder="Salaire" value="100.000">
+                            </div>
+                        </div>
+                        <div class="Btn__Popup">
+                            <div class="Quit Valider--Card">
+                                Valider
+                            </div>
+                            <div class="Cancel Cancel--Card">
+                                Annuler
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="Section__Title">
@@ -92,35 +111,17 @@
         </div>
         <div class="Section__CardList">
             <div class="Section__Card--Employee">
-                <div class="Profile__Picture">
-                    <img src="../Assets/Images/1.jpg" alt="">
-                </div>
-                <div class="Profile__Name">
-                    <h2>John Doe</h2>
-                    <h3>SEO</h3>
-                </div>
-                <div class="Profile__ModificationIcons">
-                    <div class="modal-div">
-                        <a href="#modalmod" class="js-modal bx bxs-folder bx-sm"></a>
-                        <aside class="modal" id="modalmod" aria-hidden="true" role="dialog" aria-labelledby="false" style="display:none;">
-                            <div class="modal-wrapper js-modal-stop">
-                                <h2>
-                                    Modifier cet Employé
-                                </h2>
-                                <a href="#" class="js-close-modal">Close</a>
-                            </div>
-                        </aside>
+                <div>
+                    <div class="Profile__Picture">
+                        <img src="../Assets/Images/1.jpg" alt="">
                     </div>
-                    <div class="modal-div">
-                        <a href="#modalsup" class="js-modal bx bxs-folder bx-sm"></a>
-                        <aside class="modal" id="modalsup" aria-hidden="true" role="dialog" aria-labelledby="false" style="display:none;">
-                            <div class="modal-wrapper js-modal-stop">
-                                <h2>
-                                    Supprimer cet Employé
-                                </h2>
-                                <a href="#" class="js-close-modal">Close</a>
-                            </div>
-                        </aside>
+                    <div class="Profile__Name">
+                        <h2>John Doe</h2>
+                        <h3>SEO</h3>
+                    </div>
+                    <div class="Profile__ModificationIcons">
+                        <a href="#" class="bx bxs-pen bx-sm"></a>
+                        <a href="#" class="bx bxs-trash bx-sm"></a>
                     </div>
                 </div>
             </div>
@@ -130,5 +131,6 @@
     <!--Import de la librairie GSAP-->
     <script src="../Source/Libs/gsap.min.js"></script>
     <script src="../Source/JS/app.js"></script>
+    <script src="../Source/JS/switchable.js"></script>
 </body>
 </html>

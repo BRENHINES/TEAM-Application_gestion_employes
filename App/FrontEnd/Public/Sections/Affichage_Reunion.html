@@ -14,33 +14,76 @@
     <section class="Section">
         <div class="Section__content">
             <div>
-                <a href="#Modal" class="js-modal">
-                    <i class="bx bx-plus"></i>
+                <a href="#" class="Btn__PopupOpen">
+                    <i class="bx bx-folder-plus bx-xs"></i>
                     Ajouter
                 </a>
-                <aside class="Modal" id="Modal" aria-hidden="true" role="dialog" aria-labelledby="false" style="display:none">
-                    <div class="Modal__Wrapper js-modal-stop dep">
-                        <h2>
-                            Créer un nouveau Département
-                        </h2>
-                        <div class="Modal__Content">
-                            <form action="#">
-                                <div class="Form__Field">
-                                    <input type="text" placeholder="Nom Du Département" />
-                                    <label></label>
-                                </div>
-                                <div class="Form__Field">
-                                    <input type="text" placeholder="Nom du premier Service"/>
-                                    <label></label>
-                                </div>
-                            </form>
+                <div class="Popup">
+                    <span class="Popup--Back">
+                    </span>
+                    <div class="Popup--Content">
+                        <div class="Btn__Close">&times;</div>
+                        <h2>Ajouter une Réunion</h2>
+                        <p>Veuillez remplir tous ces champs pour enrégistrer une nouvelle <span>réunion.</span></p>
+                        <div class="Fields">
+                            <div class="Field__Element">
+                                <input type="text" id="initial" placeholder="Initial de la réunion">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="text" id="nom" placeholder="Nom de la réunion">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="date" id="date" placeholder="Date de la réunion">
+                                <input type="time" id="heure" placeholder="Date">
+                            </div>
+                            <div class="Field__Element">
+                                <textarea cols="30" rows="10" placeholder="Description"></textarea>
+                            </div>
                         </div>
-                        <div class="Btn__Container">
-                            <a href="#" class="js-close-modal Reset">Annuler</a>
-                            <a href="#" class="Accept">Valider</a>
+                        <div class="Btn__Popup">
+                            <div class="Quit">
+                                Valider
+                            </div>
+                            <div class="Cancel">
+                                Annuler
+                            </div>
                         </div>
                     </div>
-                </aside>
+                </div>
+                <div class="Card__Popup">
+                    <span class="Popup--Back">
+                    </span>
+                    <div class="Popup--Content">
+                        <div class="Btn__Close Close--Card">&times;</div>
+                        <h2>Modifier cette réunion</h2>
+                        <p>Veuillez modifier un ou tous ces champs pour modifier cette <span>réunion.</span></p>
+                        <div class="Fields">
+                            <div class="Field__Element">
+                                <input type="text" name="Nouvel initial" placeholder="Initial de la réunion" value="DS">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="text" name="Nom" placeholder="Nom de la réunion" value="DSI">
+                            </div>
+                            <div class="Field__Element">
+                                <input type="date" name="Date" placeholder="Date de la réunion" value="14/07/2023">
+                                <input type="time" name="horaire" placeholder="Horaire de la réunion" value="12:00">
+                            </div>
+                            <div class="Field__Element">
+                                <textarea cols="30" rows="10" placeholder="Description">
+
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="Btn__Popup">
+                            <div class="Quit Valider--Card">
+                                Valider
+                            </div>
+                            <div class="Cancel Cancel--Card">
+                                Annuler
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="Section__Title">
@@ -48,14 +91,16 @@
         </div>
         <div class="Section__CardList">
             <div class="Section__Card--Departemnt">
-                <div class="Profile__Picture">
-                    <p>DS</p>
-                </div>
-                <div class="Profile__Name">
-                    <h2>DSI</h2>
-                </div>
-                <div class="Profile__Desc">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, magni?
+                <div>
+                    <div class="Profile__Picture">
+                        <p>DS</p>
+                    </div>
+                    <div class="Profile__Name">
+                        <h2>DSI</h2>
+                    </div>
+                    <div class="Profile__Desc">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, magni?
+                    </div>
                 </div>
             </div>
         </div>

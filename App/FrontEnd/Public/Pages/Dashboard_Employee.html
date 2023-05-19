@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../SASS/style.css">
     <!--Importation de Boxicons-->
     <link rel="stylesheet" href="../Assets/Boxicons-2.1.4/css/boxicons.min.css">
+    <link rel="import" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js">
     <title>Dashboard_Employé</title>
 </head>
 <body>
@@ -39,7 +40,6 @@
                             <h2>TE<span>AM</span></h2>
                     </div>
                 </div>
-        
                 <div class="Sidebar__Main">
                     <a href="#" class="tabs Dash active">
                         <i class="bx bxs-dashboard"></i>
@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </header>
-            <main class="Main--Full">
+            <main class="Main--Full" style="min-height: 100vh;">
                 <div class="Main--Up">
                     <h2 class="Part__Title">
                         Mes Statistiques
@@ -103,7 +103,7 @@
                             <div class="Card--Right">
                                 <div class="content">
                                     <h3>Projet en cours</h3>
-                                    <h4>5</h4>
+                                    <h4>0</h4>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                             <div class="Card--Right">
                                 <div class="content">
                                     <h3>Projet remis</h3>
-                                    <h4>10</h4>
+                                    <h4>0</h4>
                                 </div>
                             </div>
                         </div>
@@ -127,74 +127,13 @@
                             <div class="Card--Right">
                                 <div class="content">
                                     <h3>Projet terminés</h3>
-                                    <h4>20</h4>
+                                    <h4>0</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="Main--Down">
-
-                    <div class="Main__Projects">
-                        <h2>Projets Récents</h2>
-                        <div>
-                            <div class="Project">
-                                <div class="Project__Description">
-                                    <p>John Doe</p>
-                                    <p>Site Web pour l'entreprise.</p>
-                                </div>
-                            </div>
-                            <div class="Project">
-                                <div class="Project__Description">
-                                    <p>Jane Doe</p>  
-                                    <p>Application desktop et mobile pour MTN.</p>
-                                </div>
-                            </div>
-                            <div class="Project">
-                                <div class="Project__Description">
-                                    <p>Lebron James</p>
-                                    <p>Créer l'application OM pour Orange Cameroun.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="Main__Meeting">
-                        <h2>Réunions</h2>
-                        <div class="item">
-                            <div class="right">
-                                <div class="info">
-                                    <h3>Réunion 1</h3>
-                                </div>
-                                <h3>24 Mai</h3>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="right">
-                                <div class="info">
-                                    <h3>Réunion 2</h3>
-                                </div>
-                                <h3>30 Juin</h3>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="right">
-                                <div class="info">
-                                    <h3>Mise au point</h3>
-                                </div>
-                                <h3>30 Juillet</h3>
-                            </div>
-                        </div>
-                        <div class="item add-product">
-                            <div>
-                                <i class="fa-solid fa-xmark light active"></i>
-                                <a href="#">Voir plus</a>
-                            </div>
-                        </div>
-                    </div>
-    
-                </div>
+                <img src="../Assets/Images/chart-js.jpg" alt="Graphe de performance" class="Graph">
             </main>
         </div>
     </section>

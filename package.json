@@ -19,5 +19,8 @@
   "homepage": "https://github.com/BRENHINES/TEAM-Application_gestion_employes#readme",
   "devDependencies": {
     "electron": "^24.3.0"
+  },
+  "dependencies": {
+    "chart.js": "^4.3.0"
   }
 }
